@@ -484,7 +484,7 @@ I managed to succeed using these two commands:
     iptables -A INPUT -p tcp -s 10.10.14.6 -j ACCEPT
 ~~~ 
 
-Here’s the video: ![video](https://www.youtube.com/watch?v=9xX2ASQgpSU)
+Here’s the video: [![youtube](https://www.alitech-online.it/images/download/Watch_video_icon.png)0xdf](https://www.youtube.com/watch?v=9xX2ASQgpSU)
 
 
 [0xdf hacks stuff](https://0xdf.gitlab.io)
