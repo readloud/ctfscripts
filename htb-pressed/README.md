@@ -486,8 +486,7 @@ I managed to succeed using these two commands:
 
 Here’s the video: 
 
-<iframe width="713" height="401" src="https://www.youtube.com/embed/9xX2ASQgpSU" title="Webshell to PnwKit to Iptables to Root - Pressed Beyond Root [HackTheBox / UHC]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+[![Alternate Text]({[image-url](https://user-images.githubusercontent.com/67372333/196044361-ef369bd8-5749-4cd2-becb-947ddf817016.png)})]({[video-url](https://www.youtube.com/embed/9xX2ASQgpSU)} "Webshell to PnwKit to Iptables to Root - Pressed Beyond Root [HackTheBox / UHC]")
 
 [0xdf hacks stuff](https://0xdf.gitlab.io)
 ----------------
