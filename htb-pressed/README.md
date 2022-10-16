@@ -10,16 +10,13 @@ The box is vulnerable to PwnKit, so I’ll have to modify the exploit to work ov
 
 # [0xdf hacks stuff](/)
 
-[![image](/icons/youtube.png)YouTube]](https://youtube.com/@0xdf) 
-[![image](/icons/gitlab.png)Gitlab]](https://gitlab.com/0xdf/ctfscripts)[![](/icons/rss.png)feed](/feed.xml)
-[![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)](https://www.buymeacoffee.com/0xdf)
+[youtube](https://youtube.com/@0xdf) 
+[Gitlab](https://gitlab.com/0xdf/ctfscripts)
+[feed](/feed.xml)
+[Buy me a coffee](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)](https://www.buymeacoffee.com/0xdf)
 
 HTB: Pressed
 ============
-
-[ctf](/tags#ctf ) [htb-pressed](/tags#htb-pressed ) [hackthebox](/tags#hackthebox ) [nmap](/tags#nmap ) [wordpress](/tags#wordpress ) [uhc](/tags#uhc ) [burp](/tags#burp ) [wpscan](/tags#wpscan ) [totp](/tags#totp ) [2fa](/tags#2fa ) [xml-rpc](/tags#xml-rpc ) [python](/tags#python ) [python-wordpress-xmlrpc](/tags#python-wordpress-xmlrpc ) [cyberchef](/tags#cyberchef ) [webshell](/tags#webshell ) [pwnkit](/tags#pwnkit ) [cve-2021-4034](/tags#cve-2021-4034 ) [pkexec](/tags#pkexec ) [iptables](/tags#iptables ) [youtube](/tags#youtube ) [htb-scavenger](/tags#htb-scavenger ) [htb-stratosphere](/tags#htb-stratosphere ) [wp-miniorgange](/tags#wp-miniorgange )  
-  
-Feb 3, 2022
 
 [HTB: Pressed](#)
 
