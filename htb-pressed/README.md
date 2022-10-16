@@ -484,7 +484,8 @@ I managed to succeed using these two commands:
     iptables -A INPUT -p tcp -s 10.10.14.6 -j ACCEPT
 ~~~ 
 
-Here’s the [video](https://www.youtube.com/watch?v=9xX2ASQgpSU):
+Here’s the video: [![image](https://user-images.githubusercontent.com/67372333/196044361-ef369bd8-5749-4cd2-becb-947ddf817016.png)]
+(https://www.youtube.com/watch?v=9xX2ASQgpSU)
 
 [Articles]([/2022/02/03/htb-pressed.html](https://0xdf.gitlab.io/2022/02/03/htb-pressed.html))
 
@@ -501,5 +502,3 @@ Here’s the [video](https://www.youtube.com/watch?v=9xX2ASQgpSU):
 CTF solutions, malware analysis, home lab development
 
 [![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)Buy me a coffee](https://www.buymeacoffee.com/0xdf)
-
-!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments); },s.version='1.1',s.queue=\[\],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js', a=t.getElementsByTagName(n)\[0\],a.parentNode.insertBefore(u,a))}(window,document,'script'); // Insert Twitter Pixel ID and Standard Event data below twq('init','o42o1'); twq('track','PageView');
