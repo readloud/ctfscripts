@@ -486,7 +486,8 @@ I managed to succeed using these two commands:
 
 Here’s the video: 
 
-[![Alternate Text]({[image-url](https://user-images.githubusercontent.com/67372333/196044361-ef369bd8-5749-4cd2-becb-947ddf817016.png)})]({[video-url](https://www.youtube.com/embed/9xX2ASQgpSU)} "Webshell to PnwKit to Iptables to Root - Pressed Beyond Root [HackTheBox / UHC]")
+
+[![video]({https://user-images.githubusercontent.com/67372333/196044361-ef369bd8-5749-4cd2-becb-947ddf817016.png})]({https://www.youtube.com/embed/9xX2ASQgpSU} ""Webshell to PnwKit to Iptables to Root - Pressed Beyond Root [HackTheBox / UHC]"")
 
 [0xdf hacks stuff](https://0xdf.gitlab.io)
 ----------------
