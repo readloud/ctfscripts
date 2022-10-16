@@ -16,8 +16,8 @@ Pressed presents a unique attack vector on WordPress, where you have access to a
 
 Box Info
 --------
-|---------------|---------------|
 |Name | [Pressed](https://www.hackthebox.eu/home/machines/profile/440)  ![Pressed](https://0xdf.gitlab.io/icons/box-pressed.webp)|
+|---------------|---------------|
 |Release Date|3 Feb 2022|
 |Retire Date|3 Feb 2022|
 |OS |Linux ![Linux](/icons/Linux.png)|
