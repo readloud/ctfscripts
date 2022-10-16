@@ -497,6 +497,4 @@ Here’s the video: [Webshell to PnwKit to Iptables to Root - Pressed Beyond Roo
 *   [0xdf](https://0xdf.gitlab.io/assets/icons/htb-favicon.png)
 *   [HTB](https://www.hackthebox.eu/home/users/profile/4935)
 
-CTF solutions, malware analysis, home lab development
-
-[Buy me a coffee](Buy me a coffee](https://www.buymeacoffee.com/0xdf)
+[Buy me a coffee](https://www.buymeacoffee.com/0xdf) for CTF solutions, malware analysis, home lab development
