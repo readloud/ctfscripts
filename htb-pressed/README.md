@@ -484,15 +484,13 @@ I managed to succeed using these two commands:
     iptables -A INPUT -p tcp -s 10.10.14.6 -j ACCEPT
 ~~~ 
 
-Here’s the video: [![image](https://user-images.githubusercontent.com/67372333/196044361-ef369bd8-5749-4cd2-becb-947ddf817016.png)]
-(https://www.youtube.com/watch?v=9xX2ASQgpSU)
+Here’s the video: ![image](https://user-images.githubusercontent.com/67372333/196044361-ef369bd8-5749-4cd2-becb-947ddf817016.png)(https://www.youtube.com/watch?v=9xX2ASQgpSU)
 
-[Articles]([/2022/02/03/htb-pressed.html](https://0xdf.gitlab.io/2022/02/03/htb-pressed.html))
 
 0xdf hacks stuff
 ----------------
 
-*   0xdf hacks stuff
+*   [0xdf hacks stuff](https://0xdf.gitlab.io/2022/02/03/htb-pressed.html)
 *   [\[email protected\]](/cdn-cgi/l/email-protection#eede968a88c0dcdcddae89838f8782c08d8183)
 *   [0xdf\_](https://www.twitter.com/0xdf_)
 *   [0xdf](https://youtube.com/channel/UChO9OAH57Flz35RRX__E25A)
