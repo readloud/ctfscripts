@@ -20,10 +20,10 @@ Box Info
 |---------------|---------------|
 |Release Date|3 Feb 2022|
 |Retire Date|3 Feb 2022|
-|OS |Linux [Linux](https://0xdf.gitlab.io/icons/Linux.webp)|
+|OS Linux |[Linux](https://0xdf.gitlab.io/icons/Linux.png)|
 |Base Points|Hard \[40\]|
-|![First Blood User](/icons/first-blood-user.png)|N/A (non-competitive)|
-|![First Blood Root](/icons/first-blood-root.png)|N/A (non-competitive)
+|![First Blood User](https://0xdf.gitlab.io/icons/first-blood-user.png)|N/A (non-competitive)|
+|![First Blood Root](https://0xdf.gitlab.io/icons/first-blood-root.png)|N/A (non-competitive)|
 |Creator|[![](https://www.hackthebox.eu/badge/image/3769)](https://www.hackthebox.eu/home/users/profile/3769)|
 
 Recon
