@@ -20,7 +20,7 @@ Box Info
 |---------------|---------------|
 |Release Date|3 Feb 2022|
 |Retire Date|3 Feb 2022|
-|OS Linux |[Linux](https://0xdf.gitlab.io/icons/Linux.png)|
+|OS Linux |![Linux](https://0xdf.gitlab.io/icons/Linux.png)|
 |Base Points|Hard \[40\]|
 |![First Blood User](https://0xdf.gitlab.io/icons/first-blood-user.png)|N/A (non-competitive)|
 |![First Blood Root](https://0xdf.gitlab.io/icons/first-blood-root.png)|N/A (non-competitive)|
