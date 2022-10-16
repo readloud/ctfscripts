@@ -487,7 +487,7 @@ I managed to succeed using these two commands:
 Here’s the video: 
 
 
-[![image]({https://user-images.githubusercontent.com/67372333/196044361-ef369bd8-5749-4cd2-becb-947ddf817016.png})]({https://www.youtube.com/embed/9xX2ASQgpSU} "Webshell to PnwKit to Iptables to Root - Pressed Beyond Root [HackTheBox / UHC]")
+![image]({https://user-images.githubusercontent.com/67372333/196044361-ef369bd8-5749-4cd2-becb-947ddf817016.png})]({https://www.youtube.com/embed/9xX2ASQgpSU} "Webshell to PnwKit to Iptables to Root - Pressed Beyond Root [HackTheBox / UHC]")
 
 [0xdf hacks stuff](https://0xdf.gitlab.io)
 ----------------
@@ -502,4 +502,4 @@ Here’s the video:
 
 CTF solutions, malware analysis, home lab development
 
-[![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)Buy me a coffee](https://www.buymeacoffee.com/0xdf)
+[Buy me a coffee](Buy me a coffee](https://www.buymeacoffee.com/0xdf)
