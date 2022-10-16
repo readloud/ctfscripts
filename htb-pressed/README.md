@@ -6,14 +6,12 @@ I’ll leak the source for the single post on the site, and see that’s it’s 
 
 The box is vulnerable to PwnKit, so I’ll have to modify the exploit to work over the webshell. After leaking the root flag, I’ll go beyond with a Video where I take down the firewall and get a root shell.
 
-* "headline":"HTB: Pressed","image":"https://0xdf.gitlab.io/img/pressed-cover.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://0xdf.gitlab.io/2022/02/03/htb-pressed.html"},"url":"https://0xdf.gitlab.io/2022/02/03/htb-pressed.html"}      window.dataLayer = window.dataLayer || \[\]; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-P056MVQVGM');  
 
 # [0xdf hacks stuff](/)
 
 [youtube](https://youtube.com/@0xdf) 
 [Gitlab](https://gitlab.com/0xdf/ctfscripts)
-[feed](/feed.xml)
-[Buy me a coffee](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)](https://www.buymeacoffee.com/0xdf)
+[!](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)](https://www.buymeacoffee.com/0xdf)
 
 HTB: Pressed
 ============
