@@ -484,7 +484,9 @@ I managed to succeed using these two commands:
     iptables -A INPUT -p tcp -s 10.10.14.6 -j ACCEPT
 ~~~ 
 
-Here’s the video: [![youtube](https://www.alitech-online.it/images/download/Watch_video_icon.png)0xdf](https://www.youtube.com/watch?v=9xX2ASQgpSU)
+Here’s the video: 
+
+<iframe width="713" height="401" src="https://www.youtube.com/embed/9xX2ASQgpSU" title="Webshell to PnwKit to Iptables to Root - Pressed Beyond Root [HackTheBox / UHC]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 [0xdf hacks stuff](https://0xdf.gitlab.io)
