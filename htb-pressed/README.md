@@ -1,61 +1,30 @@
 # HTB: Pressed | 0xdf hacks stuff
 
-* "description":"Pressed presents a unique attack vector on WordPress, where you have access to admin creds right from the start, but can’t log in because of 2FA. This means it’s time to abuse XML-RPC, the thing that wpscan shows as a vulnerability on every WordPress instance, is rarely useful. 
+Pressed presents a unique attack vector on WordPress, where you have access to admin creds right from the start, but can’t log in because of 2FA. This means it’s time to abuse XML-RPC, the thing that wpscan shows as a vulnerability on every WordPress instance, is rarely useful. 
 
 I’ll leak the source for the single post on the site, and see that’s it’s using PHPEverywhere to run PHP from within the post. I’ll edit the post to include a webshell. The firewall is blocking outbound traffic, so I can’t get a reverse shell. 
 
 The box is vulnerable to PwnKit, so I’ll have to modify the exploit to work over the webshell. After leaking the root flag, I’ll go beyond with a Video where I take down the firewall and get a root shell.
 
 
-# [0xdf hacks stuff](/)
+# [0xdf hacks stuff]
 
-[youtube](https://youtube.com/@0xdf) 
-[Gitlab](https://gitlab.com/0xdf/ctfscripts)
-[!](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)](https://www.buymeacoffee.com/0xdf)
-
-HTB: Pressed
+## HTB: Pressed
 ============
-
-[HTB: Pressed](#)
-
- ![Pressed](/img/pressed-cover.)
 
 Pressed presents a unique attack vector on WordPress, where you have access to admin creds right from the start, but can’t log in because of 2FA. This means it’s time to abuse XML-RPC, the thing that wpscan shows as a vulnerability on every WordPress instance, is rarely useful. I’ll leak the source for the single post on the site, and see that’s it’s using PHPEverywhere to run PHP from within the post. I’ll edit the post to include a webshell. The firewall is blocking outbound traffic, so I can’t get a reverse shell. The box is vulnerable to PwnKit, so I’ll have to modify the exploit to work over the webshell. After leaking the root flag, I’ll go beyond with a Video where I take down the firewall and get a root shell.
 
 Box Info
 --------
 
-Name
-
-[Pressed](https://www.hackthebox.eu/home/machines/profile/440)  ![Pressed](/icons/box-pressed.png)
-
-Release Date
-
-3 Feb 2022
-
-Retire Date
-
-3 Feb 2022
-
-OS
-
-Linux ![Linux](/icons/Linux.png)
-
-Base Points
-
-Hard \[40\]
-
-![First Blood User](/icons/first-blood-user.png)
-
-N/A (non-competitive)
-
-![First Blood Root](/icons/first-blood-root.png)
-
-N/A (non-competitive)
-
-Creator
-
-[![](https://www.hackthebox.eu/badge/image/3769)](https://www.hackthebox.eu/home/users/profile/3769)  
+|Name |[Pressed](https://www.hackthebox.eu/home/machines/profile/440)  ![Pressed](/icons/box-pressed.png)|
+|Release Date|3 Feb 2022|
+|Retire Date|3 Feb 2022|
+|OS |Linux ![Linux](/icons/Linux.png)|
+|Base Points|Hard \[40\]|
+|![First Blood User](/icons/first-blood-user.png)|N/A (non-competitive)|
+|![First Blood Root](/icons/first-blood-root.png)|N/A (non-competitive)
+|Creator|[![](https://www.hackthebox.eu/badge/image/3769)](https://www.hackthebox.eu/home/users/profile/3769)|
 
 Recon
 -----
