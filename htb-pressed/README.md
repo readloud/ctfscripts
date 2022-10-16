@@ -490,7 +490,7 @@ Here’s the video: [Webshell to PnwKit to Iptables to Root - Pressed Beyond Roo
 ----------------
 
 *   [htb-pressed](https://0xdf.gitlab.io/2022/02/03/htb-pressed.html)
-*   [email protected\]](0xdf.223@gmail.com)
+*   [email protected](0xdf.223@gmail.com)
 *   [Twitter](https://www.twitter.com/0xdf_)
 *   [Youtube](https://youtube.com/channel/UChO9OAH57Flz35RRX__E25A)
 *   [feed](https://0xdf.gitlab.io/feed.xml)
