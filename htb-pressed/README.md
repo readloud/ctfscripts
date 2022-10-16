@@ -484,18 +484,19 @@ I managed to succeed using these two commands:
     iptables -A INPUT -p tcp -s 10.10.14.6 -j ACCEPT
 ~~~ 
 
-Here’s the video: ![image](https://user-images.githubusercontent.com/67372333/196044361-ef369bd8-5749-4cd2-becb-947ddf817016.png)(https://www.youtube.com/watch?v=9xX2ASQgpSU)
+Here’s the video: ![video](https://www.youtube.com/watch?v=9xX2ASQgpSU)
 
 
-0xdf hacks stuff
+[0xdf hacks stuff](https://0xdf.gitlab.io)
 ----------------
 
-*   [0xdf hacks stuff](https://0xdf.gitlab.io/2022/02/03/htb-pressed.html)
-*   [\[email protected\]](/cdn-cgi/l/email-protection#eede968a88c0dcdcddae89838f8782c08d8183)
-*   [0xdf\_](https://www.twitter.com/0xdf_)
-*   [0xdf](https://youtube.com/channel/UChO9OAH57Flz35RRX__E25A)
-*   [feed](/feed.xml)
-*   [![HTB](/assets/icons/htb-favicon.png)0xdf](https://www.hackthebox.eu/home/users/profile/4935)
+*   [htb-pressed](https://0xdf.gitlab.io/2022/02/03/htb-pressed.html)
+*   [email protected\]](0xdf.223@gmail.com)
+*   [Twitter](https://www.twitter.com/0xdf_)
+*   [Youtube](https://youtube.com/channel/UChO9OAH57Flz35RRX__E25A)
+*   [feed](https://0xdf.gitlab.io/feed.xml)
+*   [0xdf](https://0xdf.gitlab.io/assets/icons/htb-favicon.png)
+*   [HTB](https://www.hackthebox.eu/home/users/profile/4935)
 
 CTF solutions, malware analysis, home lab development
 
